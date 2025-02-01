@@ -18,6 +18,8 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { MenuModule } from 'primeng/menu';
 import { SidebarModule } from 'primeng/sidebar';
 
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+
 const PRIME_MODULES = [
   ButtonModule,
   InputTextModule,
@@ -35,7 +37,9 @@ const PRIME_MODULES = [
 ];
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    MainLayoutComponent
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
@@ -46,7 +50,8 @@ const PRIME_MODULES = [
     CommonModule,
     ReactiveFormsModule,
     RouterModule,
-    ...PRIME_MODULES
+    ...PRIME_MODULES,
+    MainLayoutComponent
   ]
 })
 export class SharedModule { }
