@@ -1,1 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos globales personalizados */
+:root {
+  --primary-color: #3B82F6;
+  --secondary-color: #10B981;
+  --accent-color: #8B5CF6;
+  --warning-color: #F59E0B;
+  --danger-color: #EF4444;
+}
+
+body {
+  @apply bg-gray-50;
+}
+
 /* You can add global styles to this file, and also import other style files */

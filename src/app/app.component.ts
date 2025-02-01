@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ToastModule } from 'primeng/toast';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  template: `
+    <div class="min-h-screen">
+      <router-outlet></router-outlet>
+      <p-toast position="top-right"></p-toast>
+    </div>
+  `,
+  styles: []
 })
 export class AppComponent {
-  title = 'proyecto-agente';
+  title = 'SAAS Platform';
 }
