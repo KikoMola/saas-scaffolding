@@ -5,13 +5,11 @@ import { ToastModule } from 'primeng/toast';
 @Component({
   selector: 'app-root',
   template: `
-    <div class="min-h-screen">
-      <router-outlet></router-outlet>
-      <p-toast position="top-right"></p-toast>
-    </div>
+    <p-toast></p-toast>
+    <router-outlet></router-outlet>
   `,
   styles: []
 })
 export class AppComponent {
-  title = 'SAAS Platform';
+  title = 'proyecto-agente';
 }
