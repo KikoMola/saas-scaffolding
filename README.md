@@ -1,27 +1,61 @@
-# ProyectoAgente
+# Project Management Platform
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.0.
+A comprehensive project management platform built with Angular 18.2.0, featuring a modern UI with PrimeNG components and Tailwind CSS for styling.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- User Authentication
+- Project Management
+- Task Tracking
+- Team Calendar
+- Performance Reports
+- User Settings & Preferences
+- Billing Management
 
-## Code scaffolding
+## Tech Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 18.2.0
+- PrimeNG
+- Tailwind CSS
+- Full Calendar
+- Chart.js
 
-## Build
+## Application Routes
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Authentication Routes (`/auth`)
+- `/auth/login` - User login
+- `/auth/register` - New user registration
+- `/auth/forgot-password` - Password recovery
 
-## Running unit tests
+### Dashboard Routes (`/dashboard`)
+- `/dashboard` - Main dashboard overview
+- `/dashboard/projects` - Project management
+- `/dashboard/tasks` - Task management
+- `/dashboard/calendar` - Team calendar
+- `/dashboard/reports` - Performance reports
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Settings Routes (`/settings`)
+- `/settings/profile` - User profile management
+- `/settings/security` - Security settings
+- `/settings/notifications` - Notification preferences
+- `/settings/billing` - Billing and subscription management
 
-## Running end-to-end tests
+## Development
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Setup
+1. Clone the repository
+2. Run `npm install` to install dependencies
+3. Run `ng serve` for a dev server
+4. Navigate to `http://localhost:4200/`
 
-## Further help
+### Build
+- Run `ng build` to build the project
+- The build artifacts will be stored in the `dist/` directory
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Testing
+- Run `ng test` to execute unit tests via Karma
+- Run `ng e2e` to execute end-to-end tests
+
+## Further Help
+
+For more help on the Angular CLI, check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
