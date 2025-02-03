@@ -12,60 +12,7 @@ interface Project {
 
 @Component({
   selector: 'app-projects',
-  template: `
-    <div class="space-y-6">
-      <div class="flex justify-between items-center">
-        <h2 class="text-2xl font-bold text-gray-800">Proyectos</h2>
-        <button pButton label="Nuevo Proyecto" icon="pi pi-plus"></button>
-      </div>
-
-      <p-table [value]="projects" [paginator]="true" [rows]="10" [responsive]="true">
-        <ng-template pTemplate="header">
-          <tr>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Estado</th>
-            <th>Progreso</th>
-            <th>Equipo</th>
-            <th>Fecha Límite</th>
-            <th>Acciones</th>
-          </tr>
-        </ng-template>
-        <ng-template pTemplate="body" let-project>
-          <tr>
-            <td>{{project.name}}</td>
-            <td>{{project.description}}</td>
-            <td>
-              <span [class]="'status-badge status-' + project.status.toLowerCase()">
-                {{project.status}}
-              </span>
-            </td>
-            <td>
-              <p-progressBar [value]="project.progress"></p-progressBar>
-            </td>
-            <td>
-              <div class="flex -space-x-2">
-                <div *ngFor="let member of project.team" 
-                     class="w-8 h-8 rounded-full bg-gray-300 border-2 border-white"
-                     [pTooltip]="member">
-                  {{member[0]}}
-                </div>
-              </div>
-            </td>
-            <td>{{project.deadline | date}}</td>
-            <td>
-              <button pButton icon="pi pi-pencil" 
-                      class="p-button-text p-button-rounded"
-                      (click)="editProject(project)"></button>
-              <button pButton icon="pi pi-trash" 
-                      class="p-button-text p-button-rounded p-button-danger"
-                      (click)="deleteProject(project)"></button>
-            </td>
-          </tr>
-        </ng-template>
-      </p-table>
-    </div>
-  `,
+  templateUrl: './projects.component.html',
   styles: [`
     .status-badge {
       @apply px-3 py-1 rounded-full text-sm font-medium;

@@ -1,0 +1,32 @@
+<div class="space-y-6">
+    <div class="flex justify-between items-center">
+      <h2 class="text-2xl font-bold text-gray-800">Calendario</h2>
+      <button pButton label="Nuevo Evento" icon="pi pi-plus"></button>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+      <!-- Sidebar con eventos próximos -->
+      <div class="lg:col-span-1">
+        <p-card header="Próximos Eventos">
+          <div class="space-y-4">
+            <div *ngFor="let event of upcomingEvents" 
+                 class="p-4 bg-gray-50 rounded-lg space-y-2">
+              <div class="flex items-center space-x-2">
+                <i class="pi" [ngClass]="event.icon"></i>
+                <span class="font-medium">{{event.title}}</span>
+              </div>
+              <p class="text-sm text-gray-600">{{event.date | date:'short'}}</p>
+              <p class="text-sm text-gray-500">{{event.description}}</p>
+            </div>
+          </div>
+        </p-card>
+      </div>
+
+      <!-- Calendario Principal -->
+      <div class="lg:col-span-3">
+        <p-card>
+          <full-calendar [options]="calendarOptions"></full-calendar>
+        </p-card>
+      </div>
+    </div>
+  </div>
