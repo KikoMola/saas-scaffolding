@@ -7,7 +7,11 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { DividerModule } from 'primeng/divider';
 
+// Components
 import { LandingComponent } from './landing.component';
+import { FeaturesComponent } from './components/features/features.component';
+import { PricingComponent } from './components/pricing/pricing.component';
+import { FooterComponent } from './components/footer/footer.component';
 import { LandingRoutingModule } from './landing-routing.module';
 
 const PRIME_MODULES = [
@@ -18,16 +22,16 @@ const PRIME_MODULES = [
 
 @NgModule({
   declarations: [
-    LandingComponent
+    LandingComponent,
+    FeaturesComponent,
+    PricingComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     LandingRoutingModule,
     ...PRIME_MODULES
-  ],
-  exports: [
-    LandingComponent
   ]
 })
 export class LandingModule { } 

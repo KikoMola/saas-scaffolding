@@ -1,0 +1,46 @@
+<section class="py-20">
+  <div class="container mx-auto px-6">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4">
+        Planes que se adaptan a tus necesidades
+      </h2>
+      <p class="text-xl text-gray-600">
+        Elige el plan perfecto para tu equipo
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div *ngFor="let plan of plans" 
+           class="relative bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow p-8"
+           [class.border-2]="plan.recommended"
+           [class.border-blue-500]="plan.recommended">
+        <div *ngIf="plan.recommended" 
+             class="absolute -top-4 left-1/2 transform -translate-x-1/2">
+          <span class="bg-blue-500 text-white px-4 py-1 rounded-full text-sm">
+            Recomendado
+          </span>
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-800 mb-4">{{plan.name}}</h3>
+        <div class="mb-6">
+          <span class="text-4xl font-bold">${{plan.price}}</span>
+          <span class="text-gray-600">/mes</span>
+        </div>
+        
+        <ul class="space-y-3 mb-8">
+          <li *ngFor="let feature of plan.features" 
+              class="flex items-center text-gray-600">
+            <i class="pi pi-check text-green-500 mr-2"></i>
+            {{feature}}
+          </li>
+        </ul>
+        
+        <button pButton type="button" 
+                label="Seleccionar Plan" 
+                [class.p-button-outlined]="!plan.recommended"
+                class="w-full p-button-rounded"
+                (click)="navigateToRegister()"></button>
+      </div>
+    </div>
+  </div>
+</section> 
