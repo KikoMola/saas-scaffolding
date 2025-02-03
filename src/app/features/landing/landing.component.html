@@ -5,10 +5,12 @@
       <nav class="flex justify-between items-center mb-16">
         <div class="text-2xl font-bold">ProjectHub</div>
         <div class="space-x-4">
-          <button pButton label="Iniciar Sesión" 
+          <button pButton type="button" 
+                  label="Iniciar Sesión" 
                   class="p-button-text p-button-rounded p-button-plain"
                   (click)="navigateToLogin()"></button>
-          <button pButton label="Registrarse" 
+          <button pButton type="button" 
+                  label="Registrarse" 
                   class="p-button-rounded"
                   (click)="navigateToRegister()"></button>
         </div>
@@ -24,10 +26,12 @@
             Todo lo que necesitas en un solo lugar.
           </p>
           <div class="space-x-4">
-            <button pButton label="Empezar Gratis" 
+            <button pButton type="button" 
+                    label="Empezar Gratis" 
                     class="p-button-rounded p-button-lg"
                     (click)="navigateToRegister()"></button>
-            <button pButton label="Ver Demo" 
+            <button pButton type="button" 
+                    label="Ver Demo" 
                     class="p-button-rounded p-button-outlined p-button-lg"></button>
           </div>
         </div>
@@ -100,7 +104,8 @@
             </li>
           </ul>
           
-          <button pButton label="Seleccionar Plan" 
+          <button pButton type="button" 
+                  label="Seleccionar Plan" 
                   [class.p-button-outlined]="!plan.recommended"
                   class="w-full p-button-rounded"
                   (click)="navigateToRegister()"></button>
