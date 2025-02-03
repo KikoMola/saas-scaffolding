@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './core/guards/auth.guard';
+import { LandingComponent } from './features/landing/landing.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'auth',
-    pathMatch: 'full'
+    component: LandingComponent
   },
   {
     path: 'auth',
@@ -14,17 +14,17 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    // canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     loadChildren: () => import('./features/dashboard/dashboard.module').then(m => m.DashboardModule)
   },
   {
     path: 'settings',
-    // canActivate: [AuthGuard],
+    canActivate: [AuthGuard],
     loadChildren: () => import('./features/settings/settings.module').then(m => m.SettingsModule)
   },
   {
     path: '**',
-    redirectTo: 'auth'
+    redirectTo: ''
   }
 ];
 
