@@ -46,14 +46,13 @@
       </div>
 
       <div class="flex items-center justify-between">
-        <div class="flex items-center">
+        <div class="flex items-center gap-3">
           <p-checkbox
             [binary]="true"
             formControlName="rememberMe"
-            label="Recordarme"
-            styleClass="mr-2"
+            inputId="rememberMe"
           ></p-checkbox>
-          <label class="text-sm text-gray-600">Recordarme</label>
+          <label for="rememberMe" class="text-sm text-gray-600 cursor-pointer select-none">Recordarme</label>
         </div>
         <a
           routerLink="/auth/forgot-password"
@@ -67,7 +66,7 @@
         pButton
         type="submit"
         label="Iniciar Sesión"
-        class="w-full p-3 text-base font-medium"
+        class="w-full p-3 text-base font-medium border-2 border-primary"
         [loading]="loading"
       ></button>
 
